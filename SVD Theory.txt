@@ -1,0 +1,16 @@
+Tại sao lại quan trọng Normalize?
+    Trước hết: Biến vector thành một vector đơn vị có norm(vector) = 1
+    Ví dụ: v[1, 1] => Sau khi normalization: v[1/sqrt(2), 1/sqrt(2)] 
+
+Tính toán SVD:
+Given A = UΣV^T
+=> A^T.A = VΣ^T.Σ.V^T (Eigenvalues decomposition)
+=> Calculate det(A^T.A - Iλ) = 0
+=> Sort the eigenvalues from Largest to smallest => σ1 > σ2 > ... σn >= 0
+=> x(A^T.A - Iλ) = 0 => x
+=> V = [x1, x2, ... xn]
++) AV = UΣ
+=> ui = Avi/σi
+
+Truy cập vector cột: A[:, index] => cột thứ index
+Fast calculate transpose: Matrix.T
